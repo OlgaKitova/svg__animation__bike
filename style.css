@@ -1,0 +1,72 @@
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center {
+  text-align: center;
+  width: 100%;
+}
+#right-wheel,
+#left-wheel {
+  animation: wheel 2s linear;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  transition-delay: 0ms;
+}
+
+
+@keyframes wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#bicycle {
+   animation: bike 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes bike {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(8deg);
+  }
+}
+
+#hat {
+  animation: hat 2s ease-in-out infinite alternate;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes hat {
+  from {
+    transform: translateY(0%) rotateZ(0deg);
+  }
+
+  to {
+    transform: translateY(-5%) rotateZ(5deg);
+  }
+}
+
+#bg {
+animation: bg 20s ease-in-out infinite alternate;
+transform-origin: top;
+transform-box: fill-box;
+}
+@keyframes bg {
+  from {
+    transform: scale(0.95);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
